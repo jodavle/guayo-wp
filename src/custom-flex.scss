@@ -1,13 +1,18 @@
 $headerSize: 2rem;
 $sizeIcon: 1rem;
 $horizontalMenuSize: 15rem;
+
 @font-face{
 	font-family: 'MonumentExtended';
 	font-style: normal;
 	font-weight: 500;
 	src: url(../fonts/MonumentExtended-Regular.woff) format('woff');
 }
-@mixin monument{
+@font-face{
+	font-family: 'overpass';
+	font-style: normal;
+	font-weight: 500;
+	src: url(../fonts/overpass/overpass-regular.woff) format('woff');
 }
 @mixin overpass{
 }
@@ -15,7 +20,9 @@ $horizontalMenuSize: 15rem;
 $colorDefBlack:#000;
 $colorDefWhite:#FFF;
 
-*{box-sizing:border-box;}
+*{box-sizing:border-box;
+  font-family: 'overpass', sans-serif;
+}
 body {
     margin: 0 .5rem;
     color: #666;
@@ -59,3 +66,17 @@ div.container-main{
 
 }
 
+#cover_video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    width:auto;
+    z-index: 0;
+}
+
+.is-primary{
+    background:#0003;
+}

@@ -14,11 +14,9 @@ $horizontalMenuSize: 15rem;
 	font-weight: 500;
 	src: url(../fonts/overpass/overpass-regular.woff) format('woff');
 }
-@mixin overpass{
-}
 
 $colorDefBlack:#000;
-$colorDefWhite:#FFF;
+$colorDefWhite:#FAFEFE;
 
 *{box-sizing:border-box;
   font-family: 'overpass', sans-serif;
@@ -27,7 +25,7 @@ body {
     margin: 0 .5rem;
     color: #666;
 }
-h1,h2,h3,h4,h5,h6 {
+h1 {
     color: #111;
     font-family: 'MonumentExtended', sans-serif;
 }

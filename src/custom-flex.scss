@@ -101,12 +101,44 @@ $family-primary: $family-serif;
 div.circle-data{
 	z-index:100;
 	position: absolute;
+	width: 50%;
+	top:0;
+	left:-170px;
+	@media (max-width: 48em){
+		& {
+			width: 100%;
+			top:200px;
+			left:-280px;
+		}
+	}
+	@media (max-width: 36em){
+		& {
+			width: 100%;
+			top:-10px;
+			left:-60px;
+		}
+	}
 
 	& svg{
-		width:33%;
+		fill:white;
 	}
 	& text{
-		font-size:32px;
-		color:white;
+		font-size:18px;
 	}
+}
+
+.fa-apple-music .fa-music:before {
+	content: '\266B';
+}
+.fa-apple-music .fa-music {
+	color: #FFFFFF;
+}
+.fa-apple-music-o .fa-music {
+	color: #000000;
+	font-size: 0.75rem;
+	line-height: 1.90rem;
+}
+
+.fa-apple-music.fa-stack{
+	font-size:0.75rem;
 }

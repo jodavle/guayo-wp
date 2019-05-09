@@ -14,8 +14,6 @@ $horizontalMenuSize: 15rem;
 	font-weight: 500;
 	src: url(../fonts/overpass/overpass-regular.woff) format('woff');
 }
-@mixin overpass{
-}
 
 $colorDefBlack:#000;
 $colorDefWhite:#FFF;
@@ -27,9 +25,13 @@ body {
     margin: 0 .5rem;
     color: #666;
 }
-h1,h2,h3,h4,h5,h6 {
+h1{
+	color: #111;
+	font-family: 'MonumentExtended', sans-serif;
+}
+h2,h3,h4,h5,h6 {
     color: #111;
-    font-family: 'MonumentExtended', sans-serif;
+    font-family: 'overpass', sans-serif;
 }
 
 
@@ -79,4 +81,32 @@ div.container-main{
 
 .is-primary{
     background:#0003;
+}
+
+
+// 2. Set your own initial variables
+// Update blue
+$blue: #1c344c;
+// Add pink and its invert
+// Add a serif family
+$family-serif: "Overpass", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $blue;
+// Use the existing orange as the danger color
+// Use the new serif family
+$family-primary: $family-serif;
+
+div.circle-data{
+	z-index:100;
+	position: absolute;
+
+	& svg{
+		width:33%;
+	}
+	& text{
+		font-size:32px;
+		color:white;
+	}
 }

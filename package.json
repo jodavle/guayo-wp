@@ -1,0 +1,26 @@
+{
+  "name": "guayo-wp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodavle/guayo-wp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodavle/guayo-wp/issues"
+  },
+  "homepage": "https://github.com/jodavle/guayo-wp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}

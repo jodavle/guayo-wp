@@ -25,9 +25,17 @@ body {
     margin: 0 .5rem;
     color: #666;
 }
+<<<<<<< HEAD
 h1 {
+=======
+h1{
+	color: #111;
+	font-family: 'MonumentExtended', sans-serif;
+}
+h2,h3,h4,h5,h6 {
+>>>>>>> afa56df1a1c32e1c05de4e5c554e42b5b7c6389c
     color: #111;
-    font-family: 'MonumentExtended', sans-serif;
+    font-family: 'overpass', sans-serif;
 }
 
 
@@ -77,4 +85,64 @@ div.container-main{
 
 .is-primary{
     background:#0003;
+}
+
+
+// 2. Set your own initial variables
+// Update blue
+$blue: #1c344c;
+// Add pink and its invert
+// Add a serif family
+$family-serif: "Overpass", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $blue;
+// Use the existing orange as the danger color
+// Use the new serif family
+$family-primary: $family-serif;
+
+div.circle-data{
+	z-index:100;
+	position: absolute;
+	width: 50%;
+	top:0;
+	left:-170px;
+	@media (max-width: 48em){
+		& {
+			width: 100%;
+			top:200px;
+			left:-280px;
+		}
+	}
+	@media (max-width: 36em){
+		& {
+			width: 100%;
+			top:-10px;
+			left:-60px;
+		}
+	}
+
+	& svg{
+		fill:white;
+	}
+	& text{
+		font-size:18px;
+	}
+}
+
+.fa-apple-music .fa-music:before {
+	content: '\266B';
+}
+.fa-apple-music .fa-music {
+	color: #FFFFFF;
+}
+.fa-apple-music-o .fa-music {
+	color: #000000;
+	font-size: 0.75rem;
+	line-height: 1.90rem;
+}
+
+.fa-apple-music.fa-stack{
+	font-size:0.75rem;
 }

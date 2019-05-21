@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<link rel="stylesheet" type="text/css" href="src/gridlex.css"></link>
+        <meta charset="UTF-8">
+        <title>Index</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/gridlex.css"></link>
 	</head>
 	<body>
 
@@ -9,20 +11,21 @@
             <div class="ele">
                 <div class="line"></div>
             </div>
-            <div class="ele">
-                <div class="logo"></div>
+            <div class="eleLogo">
+                <div class="logo">
+                    <img src="./dist/images/imagen.png" alt="">
+                </div>
             </div>
             <div class="ele">
                 <div class="triangle"></div>
             </div>
         </div>
 
-
-    <video id="cover_video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-        <source src="video/Superb_sunset.mp4" type="video/mp4">
-        <source src="video/Superb_sunset.webm" type="video/webm">
-        Sorry, your browser does not support HTML5 video.
-    </video>
+        <video id="cover_video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="video/Superb_sunset.mp4" type="video/mp4">
+            <source src="video/Superb_sunset.webm" type="video/webm">
+            Sorry, your browser does not support HTML5 video.
+        </video>
 
         <section class="hero is-primary is-fullheight">
         <!-- Hero head: will stick at the top -->
@@ -31,9 +34,9 @@
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item">
-                            <img src="./imagen.png" alt="">
+                            <img src="./dist/images/imagen.png" alt="">
                         </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                        <span class="navbar-burger burger menu" data-target="navbarMenuHeroA">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -60,6 +63,28 @@
                             </span>
                         </div>
                     </div>
+                    <div id="navbarMenuHeroB" class="navbarmenu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">
+                                Home
+                            </a>
+                            <a class="navbar-item">
+                                Examples
+                            </a>
+                            <a class="navbar-item">
+                                Documentation
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-primary is-inverted">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Download</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </nav>
         </div>
@@ -88,5 +113,5 @@
         </section>
 
 		</body>
-    <script src="main.min.js"></script>
+    <script src="dist/javascript/main.min.js"></script>
 </html>

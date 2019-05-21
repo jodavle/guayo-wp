@@ -17,6 +17,7 @@ $horizontalMenuSize: 15rem;
 
 $colorDefBlack:#000;
 $colorDefWhite:#FAFEFE;
+$colorPrimary:#1c344c;
 
 *{box-sizing:border-box;
   font-family: 'overpass', sans-serif;
@@ -25,15 +26,11 @@ body {
     margin: 0 .5rem;
     color: #666;
 }
-<<<<<<< HEAD
-h1 {
-=======
 h1{
 	color: #111;
 	font-family: 'MonumentExtended', sans-serif;
 }
 h2,h3,h4,h5,h6 {
->>>>>>> afa56df1a1c32e1c05de4e5c554e42b5b7c6389c
     color: #111;
     font-family: 'overpass', sans-serif;
 }
@@ -146,3 +143,55 @@ div.circle-data{
 .fa-apple-music.fa-stack{
 	font-size:0.75rem;
 }
+
+.bootScreenAnimation{
+    width:100vw;height:100vh;
+    position:fixed;display:block;
+    top:0;left:0;z-index:101;
+    background:$colorPrimary;
+    & .eleLogo{
+        position:relative;
+        top:50%;left:50%;
+        transform:translate(-50%,-50%);
+        width:180px;
+    }
+    & .ele{
+        position:relative;
+        top:50%; left:50%;
+        width:180px;
+        transform:translate(-50%,-50%);
+            & .triangle{
+                width: 180px;
+                height:5px;
+                background:white;
+        }
+    }
+}
+section{
+    &.hero{
+        background-size:100%;
+        background-position-y:bottom;
+            @media (max-width: 48em){
+                & {
+                    background-size:cover;
+                }
+        }
+    }
+}
+
+.navbar-burger{
+    z-index:102 !important;
+    color: $colorDefWhite !important;
+}
+
+#navbarMenuHeroA div.navbar-end{
+    @media (min-width:1087px){
+        &{display:none;}
+    }
+}
+#navbarMenuHeroB div.navbar-end{
+    @media (max-width:1087px){
+        &{display:none;}
+    }
+}
+

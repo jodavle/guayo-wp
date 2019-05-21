@@ -1,6 +1,7 @@
 .DS_Store
 */.DS_Store
-src/.sass-cache/
-src/.sass-cache/*
-
+**/.sass-cache/
+/**/.sass-cache/*
+node_modules
+.idea
 

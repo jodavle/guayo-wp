@@ -15,7 +15,7 @@ var autoprefixerOptions = {
 sass.compiler = require('node-sass');
 
 gulp.task('styles', () => {
-    return gulp.src('src/gridlex.scss')
+    return gulp.src('src/scss/gridlex.scss')
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(groupmq())
@@ -25,7 +25,7 @@ gulp.task('styles', () => {
 
 
 gulp.task('js', () => {
-    return gulp.src(['javascript/anime.min.js','javascript/custom.js', 'node_modules/@fortawesome/fontawesome-free/js/all.js'], {sourcemap:true})
+    return gulp.src(['src/javascript/anime.min.js','src/javascript/custom.js', 'node_modules/@fortawesome/fontawesome-free/js/all.js'], {sourcemap:true})
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest('./dist/javascript/'))
@@ -38,9 +38,9 @@ gulp.task('image', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('src/*.scss', gulp.series('styles'));
+    gulp.watch('src/scss/*.scss', gulp.series('styles'));
     gulp.watch('src/images/*', gulp.series('image'));
-    gulp.watch('javascript/*.js', gulp.series('js'));
+    gulp.watch('src/javascript/*.js', gulp.series('js'));
 });
 
 gulp.task('default', gulp.parallel('styles', 'js', 'image', 'watch'));

@@ -64,4 +64,11 @@ anime({
         document.getElementsByClassName("bootScreenAnimation")[0].style.display = "none";
     }
 })
+anime({
+    targets: 'div.circle-data',
+    easing: 'linear',
+    rotate: ['0','359'],
+    loop: true,
+    duration: 20000
+})
 

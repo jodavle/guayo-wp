@@ -27,12 +27,15 @@ body {
     color: #666;
 }
 h1{
-	color: #111;
+	color: $colorDefBlack;
 	font-family: 'MonumentExtended', sans-serif;
 }
 h2,h3,h4,h5,h6 {
-    color: #111;
+    color: $colorDefBlack;
     font-family: 'overpass', sans-serif;
+    h5,h6{
+        color: $colorDefWhite;
+    }
 }
 
 
@@ -102,21 +105,14 @@ $family-primary: $family-serif;
 div.circle-data{
 	z-index:100;
 	position: absolute;
-	width: 50%;
-	top:0;
-	left:-170px;
-	@media (max-width: 48em){
-		& {
-			width: 100%;
-			top:200px;
-			left:-280px;
-		}
-	}
+	width: 500px;
+	top:50px;
+	left:-250px;
 	@media (max-width: 36em){
 		& {
-			width: 100%;
-			top:-10px;
-			left:-60px;
+			width: 420px;
+			top:0;
+			left:-250px;
 		}
 	}
 
@@ -194,4 +190,6 @@ section{
         &{display:none;}
     }
 }
-
+.button{
+    margin: 5px;
+}

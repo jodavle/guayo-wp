@@ -146,3 +146,36 @@ if ( ! function_exists( 'eduardopinillos_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'eduardopinillos_pri_menu' ) ) :
+	/**
+	 * Display a menu.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function eduardopinillos_pri_menu() {
+        $menuParameters = array(
+        'theme_location' => 'menu-1',
+        'menu_id'        => 'primary-menu',
+        'container'       => false,
+        'echo'            => false,
+        'items_wrap'      => '%3$s',
+        'link_before'   =>  '<span class="navbar-item">',
+        'link_after'    =>  '</span>',
+        'depth'           => 0
+        );
+        echo str_replace(
+            '<a','<a class=""',
+            strip_tags(wp_nav_menu( $menuParameters ), '<a><span>' ));
+        	}
+endif;
+
+if ( ! function_exists( 'wp_nav_menu_attributes_filter' ) ) :
+function wp_nav_menu_attributes_filter($var) {
+        return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
+}
+add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+endif;

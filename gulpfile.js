@@ -15,19 +15,19 @@ var autoprefixerOptions = {
 sass.compiler = require('node-sass');
 
 gulp.task('styles', () => {
-    return gulp.src('src/scss/gridlex.scss')
+    return gulp.src('src/scss/style.scss')
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(groupmq())
         .pipe(cssnano())
-        .pipe(gulp.dest('./dist/css/'))
+        .pipe(gulp.dest('./'))
 });
 
 
 gulp.task('js', () => {
-    return gulp.src(['src/javascript/anime.min.js','src/javascript/custom.js', 'node_modules/@fortawesome/fontawesome-free/js/all.js'], {sourcemap:true})
-        .pipe(uglify())
+    return gulp.src(['src/javascript/anime.min.js','src/javascript/custom.js','node_modules/@fortawesome/fontawesome-free/js/all.js'], {sourcemap:true})
         .pipe(concat('main.min.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/javascript/'))
 });
 

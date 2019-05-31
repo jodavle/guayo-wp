@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -29,7 +28,7 @@
         </div>
         <div class="eleLogo">
             <div class="logo">
-            <img src="<?php the_custom_logo(); ?>" alt="">
+            <?php the_custom_logo(); ?>
             </div>
         </div>
         <div class="ele">
@@ -39,37 +38,42 @@
 
 
 
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'eduardopinillos' ); ?></a>
-
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'eduardopinillos' ); ?></a>
+<!--
 <header id="masthead" class="site-header">
+-->
+    <section class="hero is-medium is-primary" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/images/header.png');background-repeat:no-repeat;background-size:100% 100%;">
     <div class="hero-head site-branding">
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php the_custom_logo?>" alt=""><span class="navbar-burger burger menu" aria-controls="primary-menu" aria-expanded="false">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span></a>
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end"><?php esc_html_e('Primary Menu', 'eduardopinillos');?>
-                        <?php
-                            $menuParameters = array(
-                                'theme_location' => 'menu-1',
-                                'menu_id'        => 'primary-menu',
-                                'container'       => false,
-                                'echo'            => false,
-                                'items_wrap'      => '%3$s',
-                                'depth'           => 0,
-                            ) );
+                    <a class="navbar-item" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                    <img src="<?php
+                        $custom_logo_id = get_theme_mod( 'custom_logo' );
+                        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                        echo $image[0];
+                    ?>"></a>
+                    <span role="button" class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-controls="primary-menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                    <div class="navbar-end"><?/*php esc_html_e('Primary Menu', 'eduardopinillos');*/?>
 
-                            echo strip_tags(wp_nav_menu( $menuParameters ), '<a class="navbar-item">' );
-                        ?>
-                        </div>
+                        <?php eduardopinillos_pri_menu(); ?>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title"><?php bloginfo('name');?></h2>
+            <h3 class="subtitle"><?php bloginfo('description'); ?></h3>
+        </div>
+    </div>
+    </section>
 </header><!-- #masthead -->
 <div id="content" class="site-content">

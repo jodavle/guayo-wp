@@ -16,7 +16,11 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+        <main id="main" class="site-main">
+
+        <section class="hero is-primary">
+        <div class="hero-body">
+        <div class="container">
 
 		<?php
 		if ( have_posts() ) :
@@ -50,8 +54,12 @@ get_header();
 
 		endif;
 		?>
+        </div>
+        </div>
 
-		</main><!-- #main -->
+        </section>
+
+        </main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php

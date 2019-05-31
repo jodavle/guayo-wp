@@ -64,6 +64,13 @@ anime({
         document.getElementsByClassName("bootScreenAnimation")[0].style.display = "none";
     }
 })
+
+
+var cirData = document.querySelectorAll('div.circle-data');
+if(!cirData){
+    console.log('Prueba');
+}
+else{
 anime({
     targets: 'div.circle-data',
     easing: 'linear',
@@ -71,4 +78,4 @@ anime({
     loop: true,
     duration: 20000
 })
-
+}

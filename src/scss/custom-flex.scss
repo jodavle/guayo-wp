@@ -5,14 +5,14 @@ $horizontalMenuSize: 15rem;
 @font-face{
 	font-family: 'MonumentExtended';
 	font-style: normal;
-	font-weight: 500;
-	src: url(../fonts/MonumentExtended-Regular.woff) format('woff');
+	font-weight: 600;
+	src: url('./fonts/MonumentExtended-Regular.woff') format('woff');
 }
 @font-face{
 	font-family: 'overpass';
 	font-style: normal;
 	font-weight: 500;
-	src: url(../fonts/overpass/overpass-regular.woff) format('woff');
+	src: url('./fonts/overpass/overpass-regular.woff') format('woff');
 }
 
 $colorDefBlack:#000;
@@ -108,10 +108,11 @@ div.circle-data{
 	width: 500px;
 	top:50px;
 	left:-250px;
+    border-radius:50%;
 	@media (max-width: 36em){
 		& {
 			width: 420px;
-			top:0;
+			top:250px;
 			left:-250px;
 		}
 	}
@@ -180,16 +181,6 @@ section{
     color: $colorDefWhite !important;
 }
 
-#navbarMenuHeroA div.navbar-end{
-    @media (min-width:1087px){
-        &{display:none;}
-    }
-}
-#navbarMenuHeroB div.navbar-end{
-    @media (max-width:1087px){
-        &{display:none;}
-    }
-}
 .button{
     margin: 5px;
 }

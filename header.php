@@ -23,8 +23,10 @@
 <div id="page" class="site">
 
     <div class="bootScreenAnimation">
+            <div class="img-bg-anim" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/images/inicio.jpeg');background-repeat:no-repeat;background-size:cover;min-height:100%;width:100%;opacity:0.2;position:absolute;right:0;"></div>
         <div class="ele">
-            <div class="line"></div>
+            <div class="line">
+            </div>
         </div>
         <div class="eleLogo">
             <div class="logo">
@@ -68,6 +70,8 @@
             </div>
         </nav>
     </div>
+
+<?php if(!is_front_page()): ?>
     <div class="hero-body">
         <div class="container">
             <h2 class="title"><?php bloginfo('name');?></h2>
@@ -75,5 +79,7 @@
         </div>
     </div>
     </section>
+<?php endif;?>
 </header><!-- #masthead -->
 <div id="content" class="site-content">
+
